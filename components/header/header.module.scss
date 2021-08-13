@@ -1,0 +1,36 @@
+.header {
+  height: 80vh;
+  background: url("../../src/images/header.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .title {
+    font-family: "anpad_script";
+    font-size: 3.75rem;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .actionButton {
+    a {
+      color: #fff;
+    }
+    padding: 0.3125rem 0.9375rem;
+    margin-top: 0.625rem;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.349);
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+      transition: 0.4s;
+      background-color: rgba(0, 0, 0, 0.788);
+      transform: scale(1.2);
+      box-shadow: 2px 2px 8px rgb(0 0 0 / 62%);
+    }
+  }
+}

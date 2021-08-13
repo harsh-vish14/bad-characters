@@ -1,0 +1,47 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5625rem 0px;
+  padding: 0.9375rem;
+  border-radius: 10px;
+  transition: 0.4s;
+  box-shadow: 0px 3px 5px #00000041;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: 0.4s;
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    .extraDetails {
+      display: flex;
+      align-items: center;
+      padding-left: 0.625rem;
+    }
+    .name {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+    .status {
+      padding-left: 1.25rem;
+    }
+  }
+}
+.occupation {
+  color: #9d9c9c;
+}
+
+@media only screen and (max-width: 535px) {
+  .item {
+    .details {
+      display: block;
+      .extraDetails {
+        padding: 0.625rem;
+        padding-left: 0rem;
+      }
+    }
+  }
+}

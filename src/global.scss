@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+@font-face {
+  font-family: "anpad_script";
+  src: local("anpad_script"), url("./fonts/anpad_script.ttf") format("truetype");
+}
+* {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  // font-family: "anpad_script";
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+.ant-select-selector {
+  display: none;
+}
