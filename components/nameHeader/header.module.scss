@@ -1,0 +1,55 @@
+.header {
+  .headerImage {
+    height: 70vh;
+    filter: blur(2px);
+  }
+  .image {
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 8px;
+    border: 4px solid #fff;
+    position: relative;
+    top: -6.25rem;
+    margin: auto;
+    margin-bottom: -6.25rem;
+    img {
+      display: block;
+      height: 12.5rem;
+      width: 12rem;
+      object-fit: cover;
+
+      border-radius: 4px;
+      object-position: top;
+    }
+  }
+  span {
+    margin-right: 0.625rem;
+  }
+  .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .name {
+      font-size: 2.5rem;
+    }
+    .nickName {
+      font-size: 0.9375rem;
+      opacity: 0.8;
+    }
+    .MoreDetails {
+      display: flex;
+      align-items: center;
+      div {
+        font-size: 0.9375rem;
+        margin-top: 0.625rem;
+        margin-left: 1.25rem;
+      }
+    }
+  }
+  .information {
+    margin: 2.5rem;
+    width: fit-content;
+    margin-top: 0.625rem;
+    margin-bottom: 0rem;
+  }
+}

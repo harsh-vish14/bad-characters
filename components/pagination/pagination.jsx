@@ -5,6 +5,7 @@ import Item from "../Item/item";
 import urlCreator from "../../helper/urlCreator";
 import Loading from "../loading/loading";
 import { Empty } from "antd";
+import { Link } from "react-router-dom";
 
 const PaginationComponent = ({
   currentPage = [],
@@ -23,6 +24,8 @@ const PaginationComponent = ({
         image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
         imageStyle={{
           height: 60,
+          marginTop: 10,
+          marginBottom: 10,
         }}
         description={<span>No data found.</span>}
       ></Empty>
@@ -34,8 +37,8 @@ const PaginationComponent = ({
       <div className={classes.items}>
         {currentPage.map((item) => {
           return (
-            <a
-              href={urlCreator(item.name)}
+            <Link
+              to={urlCreator(item.name)}
               key={item.char_id}
               style={{ color: "black" }}
             >
@@ -45,7 +48,7 @@ const PaginationComponent = ({
                 status={item.status}
                 occupation={item.occupation}
               />
-            </a>
+            </Link>
           );
         })}
       </div>

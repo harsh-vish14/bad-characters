@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
+import occupations from "../../helper/occupation";
+import Status from "../status/status";
 import classes from "./item.module.scss";
 
 const Item = ({ name, birthday, status, occupation }) => {
   let [occupationString, setOccupationString] = useState("");
-  const occupations = (values) => {
-    if (!values || values.length == 0) {
-      return "";
-    }
 
-    return values.join(", ");
-  };
   useEffect(() => {
     setOccupationString(occupations(occupation));
   }, []);
@@ -20,20 +16,15 @@ const Item = ({ name, birthday, status, occupation }) => {
           <div className={classes.name}>{name}</div>
           <div className={classes.extraDetails}>
             <div className={classes.dateOfBirth}>DOB: {birthday}</div>
-            <div
-              className={classes.status}
-              style={{
-                color: status.toLowerCase() == "alive" ? "green" : "red",
-              }}
-            >
-              {status}
+            <div className={classes.status}>
+              <Status status={status} />
             </div>
           </div>
         </div>
         <div className={classes.occupation}>{occupationString}</div>
       </div>
       <div className={classes.more}>
-        <img src="../../src/images/chevron-right.svg" />
+        <img src={"/images/chevron-right.svg"} />
       </div>
     </div>
   );

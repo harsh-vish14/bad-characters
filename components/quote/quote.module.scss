@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+.quote {
+  font-family: "Kalam", cursive;
+  font-size: 1.875rem;
+  position: relative;
+  z-index: 0;
+  img {
+    height: 40px;
+  }
+  .quoteIcon {
+    position: absolute;
+    top: -1.25rem;
+    left: -1.25rem;
+    z-index: -1;
+  }
+  .quoteMessage {
+    margin: 2.5rem 0.625rem;
+  }
+}
