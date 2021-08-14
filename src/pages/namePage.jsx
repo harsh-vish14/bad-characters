@@ -13,7 +13,6 @@ const NamePage = () => {
   const [notFound, setNotFound] = useState(false);
   useEffect(async () => {
     const charData = await getByName(name, true);
-    console.log(charData);
     if (charData.length != 1) {
       setNotFound(true);
     } else {
