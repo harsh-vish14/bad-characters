@@ -14,8 +14,7 @@ Bad characters informations with there quotes
   
 ## Screenshots
 
-
-
+![screencapture-bad-characters-netlify-app-2021-08-15-13_03_47](https://user-images.githubusercontent.com/67375762/129470763-16ffbece-3d34-4f17-8918-72692d0561bf.png)
   
 ## Run Locally
 
