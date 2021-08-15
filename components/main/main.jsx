@@ -19,6 +19,11 @@ const Main = () => {
   const [loading, setLoading] = useState(true);
   const [allCategory, setAllCategory] = useState([]);
 
+  /**
+   * Filling data in state
+   * @param {Array} data
+   * @return void
+   */
   const dataFilling = (data = []) => {
     setTotalPages(data.length);
     let splitData = split(data, 10);
@@ -26,6 +31,10 @@ const Main = () => {
     setCurrentPage(splitData[0]);
   };
 
+  /**
+   * Getting all data from getAll function
+   * @return void
+   */
   const getAllData = async () => {
     let allData = await getAll().catch((err) => console.error(err));
     setAllCategory(category(allData));
@@ -33,6 +42,10 @@ const Main = () => {
     setLoading(false);
   };
 
+  /**
+   * Getting searched data as search value changed
+   * @return void
+   */
   const searchChanged = async (value) => {
     setLoading(true);
     if (value == "") {
@@ -44,6 +57,11 @@ const Main = () => {
     }
   };
 
+  /**
+   * Getting category filtered data
+   * @param {String} value
+   * @return void
+   */
   const optionChanged = async (value) => {
     setLoading(true);
     if (value === undefined) {
@@ -57,14 +75,21 @@ const Main = () => {
     }
   };
 
+  /**
+   * filtering data as per page number
+   * @param {Integer} page
+   * @return void
+   */
   const onChangePage = (page) => {
     setCurrentPageNumber(page);
   };
 
+  // triggering function on firs time on component load
   useEffect(async () => {
     await getAllData();
   }, []);
 
+  // triggering function on change currentPageNumber
   useEffect(() => {
     if (paginatedPages.length) {
       setCurrentPage(paginatedPages[currentPageNumber - 1]);

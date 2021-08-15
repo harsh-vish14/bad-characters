@@ -2,6 +2,18 @@ import React from "react";
 import Status from "../status/status";
 import classes from "./header.module.scss";
 import { Image } from "antd";
+/**
+ * Header of dynamic pages
+ * @param {URL} image
+ * @param {String} name
+ * @param {String} nickName
+ * @param {String} dob
+ * @param {String} status
+ * @param {Array} occupation
+ * @param {String} portrayed
+ * @param {Array} appearance
+ * @return {Component}
+ */
 const Header = ({
   image,
   name,
@@ -12,12 +24,18 @@ const Header = ({
   portrayed,
   appearance,
 }) => {
-  const createAppearance = (appearance) => {
-    if (!appearance || appearance.length == 0) {
+  /**
+   * converting array to string
+   * @param {Array} seasons
+   * @return {String}
+   */
+  const createSeasons = (seasons) => {
+    if (!seasons || seasons.length == 0) {
       return "";
     }
-    return appearance.join(", ");
+    return seasons.join(", ");
   };
+
   return (
     <div className={classes.header}>
       <div
@@ -56,7 +74,7 @@ const Header = ({
       </div>
       <div className={classes.information}>
         <span>Seasons:</span>
-        {createAppearance(appearance)}
+        {createSeasons(appearance)}
       </div>
     </div>
   );

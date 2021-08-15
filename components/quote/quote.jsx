@@ -1,5 +1,11 @@
 import React from "react";
 import classes from "./quote.module.scss";
+
+/**
+ * reusable quote component
+ * @param {String} message
+ * @return {Component}
+ */
 const Quote = ({ message }) => {
   return (
     <div className={classes.quote}>

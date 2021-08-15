@@ -4,7 +4,7 @@ import classes from "./navbar.module.scss";
 import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const location = useLocation();
+  const location = useLocation(); // getting the current page location
   return (
     <div className={classes.navbar}>
       <div className={classes.logo}>

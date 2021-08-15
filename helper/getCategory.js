@@ -1,3 +1,9 @@
+/**
+ * Getting all category from data
+ * @param {Array} data
+ * @return {Array}
+ */
+
 const category = (data) => {
   if (!data) {
     return [];

@@ -4,14 +4,22 @@ import Quote from "../quote/quote";
 import classes from "./quotes.module.scss";
 import { Empty } from "antd";
 
+/**
+ * creating all Quotes component
+ * @param {String} name
+ * @return {Component}
+ */
+
 const Quotes = ({ name }) => {
   const [quotes, setQuotes] = useState([]);
   const [loading, setLoading] = useState(false);
+
   useEffect(async () => {
-    const quotes = await getQuotesByName(name);
+    const quotes = await getQuotesByName(name); // getting all quotes by name
     setQuotes(quotes);
     setLoading(false);
   }, [name]);
+
   if (loading) {
     return <Loading />;
   }

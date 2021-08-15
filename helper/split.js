@@ -1,3 +1,10 @@
+/**
+ * Splitting data as per range
+ * @param {Array} data
+ * @param {Number} range
+ * @return {Array}
+ */
+
 const split = (data, range) => {
   if (!data || data.length == 0) {
     return [];
